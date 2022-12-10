@@ -75,6 +75,17 @@ app.delete('/task/:id',  async (req, res) => {
   return res.status(200).json({ message: 'Product Successfully Deleted' });
 })
 
+app.put('/task/:id', async (req, res) => {
+  let result = await Task.updateOne(
+      {_id :req.params.id},
+      {
+          $set : req.body
+      }
+  )
+  res.send(result)
+
+})
+
 if(process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
