@@ -40,6 +40,13 @@ app.post('/task', async(req,res) => {
   })
 })
 
+app.get('/task', async(req,res) => {
+  {
+    const taskData = await Task.find();
+    res.send(taskData);
+}
+})
+
 if(process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
