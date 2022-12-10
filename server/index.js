@@ -26,6 +26,20 @@ app.get('/health', (req, res) => {
 app.post('/task', async(req,res) => {
   const {title, content} = req.body;
 
+  if (!title) {
+    return res.send({
+      success: false,
+      message: "title cannot be empty",
+    });
+  }
+
+  if (!content) {
+    return res.send({
+      success: false,
+      message: "content cannot be empty",
+    });
+  }
+
   const newTask = new Task({
    title,
    content
