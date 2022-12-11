@@ -3,8 +3,8 @@ import dotennv from 'dotenv';
 import path from 'path';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-
 import Task from './models/Task.js';
+const __dirname = path.resolve();
 
 dotennv.config();
 const app = express();
