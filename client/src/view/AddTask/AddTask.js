@@ -59,13 +59,13 @@ function AddTask() {
                 />
               </div>
                <div className="mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="content"
-                  placeholder="Content"
-                  value={content} onChange={(e) => { setContent(e.target.value) }}
-                />
+                <textarea
+                 placeholder='Content' 
+                 className="form-control" 
+                 id="content" 
+                 value={content} 
+                 onChange={(e) => { setContent(e.target.value) }}>
+                </textarea>
               </div>
               <button className="addtask-page-btn w-100 mb-5" type="button" onClick={addTask}>
                 <i class="fa-solid fa-right-to-bracket"></i>  Add Task
