@@ -19,9 +19,12 @@ function Home() {
 
       <div className='container'>
         <div className=' app-title-container '>
-          <div className='row'>
+          
             <h2 className='app-title text-center'>📝 Daily Task</h2>
           </div>
+          
+            <div className='app-task-container'>
+            <div className='row'>
           {
             tasks && tasks.map((task, i) => {
               return (
@@ -35,6 +38,7 @@ function Home() {
               )
             })
           }
+        </div>
         </div>
       </div>
     </>
