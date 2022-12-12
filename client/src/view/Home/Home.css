@@ -7,7 +7,8 @@
     border-radius: 10px;
     overflow-y: scroll;
     height: 400px;
-    box-shadow: 1px 1px 3px  gray;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px  gray;
 }
 
 .app-title-container{
@@ -16,8 +17,8 @@
   margin-bottom: 20px;
   border-radius: 10px;
   display: block;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
   box-shadow: 1px 1px 3px  gray;
   }
   

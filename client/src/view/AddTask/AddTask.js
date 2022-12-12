@@ -34,7 +34,7 @@ function AddTask() {
   return (
     <>
       <div className='container'>
-        <div className=' card-add-task'>
+        <div className=' card-add-task mb-5'>
         <div className='row'>
           <h2 className='text-center mt-3'>Add Task 📝</h2>
           <div className='col-md-6'>
