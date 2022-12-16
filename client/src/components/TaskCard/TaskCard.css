@@ -24,3 +24,19 @@
       right: 10px;
       cursor: pointer;
   }
+
+  .deleteButton{
+    position: absolute;
+    top: 23px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  .deleteImg{
+    height: 40px;
+  }
+
+  .deleteImg:hover{
+    box-shadow: 5px 5px 10px 2px gray;
+    transition: 0.5s;
+  }
