@@ -61,18 +61,9 @@ app.get('/task', async(req,res) => {
 }
 })
 
-app.delete('/task/:id',  async (req, res) => {
-  const id = req.params.id;
-  let task;
-  try {
-      task = await Task.findByIdAndRemove(id)
-  } catch (err) {
-      console.log(err);
-  }
-  if (!task) {
-      return res.status(404).json({ message: 'Unable To Delete By this Id' })
-  }
-  return res.status(200).json({ message: 'Product Successfully Deleted' });
+app.delete("/task/:id",async(req,res)=>{
+  const result = await Task.deleteOne({_id:req.params.id})
+  res.send(result);
 })
 
 app.put('/task/:id', async (req, res) => {

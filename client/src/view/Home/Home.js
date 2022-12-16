@@ -14,31 +14,32 @@ function Home() {
     })
   }, [])
 
+
   return (
     <>
 
       <div className='container'>
         <div className=' app-title-container '>
-          
-            <h2 className='app-title text-center'>📝 Daily Task</h2>
-          </div>
-          
-            <div className='app-task-container'>
-            <div className='row'>
-          {
-            tasks && tasks.map((task, i) => {
-              return (
-                <>
-                  <TaskCard
-                    key={i}
-                    title={task.title}
-                    content={task.content}
-                  />
-                </>
-              )
-            })
-          }
+
+          <h2 className='app-title text-center'>📝 Daily Task</h2>
         </div>
+
+        <div className='app-task-container'>
+          <div className='row'>
+            {
+              tasks && tasks.map((task, index) => {
+                return (
+                  <>
+                    <TaskCard
+                      taskId={task._id}
+                      title={task.title}
+                      content={task.content}
+                    />
+                  </>
+                )
+              })
+            }
+          </div>
         </div>
       </div>
     </>
